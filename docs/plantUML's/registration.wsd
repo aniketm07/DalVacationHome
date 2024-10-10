@@ -1,0 +1,35 @@
+@startuml
+actor User
+participant "Frontend Application" as FE
+participant "AWS API Gateway" as APIGW
+participant "Lambda - Registration" as LambdaReg
+participant "AWS Cognito" as Cognito
+participant "DynamoDB - User Table" as DynamoDB
+
+User -> FE : Fill and submit registration form (email, password, security question, security answer, Caesar cipher key, role)
+FE -> APIGW : Send registration request
+APIGW -> LambdaReg : Invoke registration Lambda function
+
+alt Validate Input
+    LambdaReg -> LambdaReg : Validate email and password fields
+    LambdaReg -> LambdaReg : Validate other required fields
+end
+
+alt User Already Exists
+    LambdaReg -> DynamoDB : Call verifyUser(email, role)
+    DynamoDB -> LambdaReg : Return user exists
+    LambdaReg -> APIGW : Return 400 error with message "User already exists."
+    APIGW -> FE : Return 400 error with message "User already exists."
+else New User
+    LambdaReg -> Cognito : Call SignUp(email, password, custom attribute Role)
+    Cognito -> Cognito : Pre-sign-up trigger auto confirms User
+    Cognito -> LambdaReg : Return registration success
+
+    LambdaReg -> DynamoDB : Store user details (email, password, security question, security answer, Caesar cipher key, role)
+    DynamoDB -> LambdaReg : Return success
+
+    LambdaReg -> APIGW : Return 200 status with message "User created successfully!"
+    APIGW -> FE : Return 200 status with message "User created successfully!"
+end
+
+@enduml

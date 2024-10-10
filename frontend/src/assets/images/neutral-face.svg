@@ -1,0 +1,7 @@
+<svg fill="#9E9E9E" width="64px" height="64px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>neutral-face-line</title>
+    <path d="M24.05,22.06h-12a1,1,0,0,0,0,2h12a1,1,0,0,0,0-2Z" stroke="#9E9E9E"/>
+    <path d="M18,2A16,16,0,1,0,34,18,16,16,0,0,0,18,2Zm0,30A14,14,0,1,1,32,18,14,14,0,0,1,18,32Z" stroke="#9E9E9E" stroke-width="2"/>
+    <circle cx="25.16" cy="14.28" r="1.8" stroke="#9E9E9E" stroke-width="2"/>
+    <circle cx="11.16" cy="14.28" r="1.8" stroke="#9E9E9E" stroke-width="2"/>
+</svg>

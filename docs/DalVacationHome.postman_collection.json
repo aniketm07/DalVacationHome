@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "8b957d69-7dd4-4347-808c-d2975dbea964",
+		"name": "DalVacationHome",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30237515",
+		"_collection_link": "https://blue-comet-663175.postman.co/workspace/GrowBiz~ba810772-ac94-4a42-acde-ea9a29a7b0ee/collection/30237515-8b957d69-7dd4-4347-808c-d2975dbea964?action=share&source=collection_link&creator=30237515"
+	},
+	"item": [
+		{
+			"name": "RegisterUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"YourSecurePassword123@!\",\n  \"securityQuestion\": \"What was the name of the street you grew up on?\",\n  \"securityAnswer\": \"Main Street\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"role\": \"Administrator\",\n  \"ceaserCipherKey\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/prod/auth/registeration",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"prod",
+						"auth",
+						"registeration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginUserEmailPassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"YourSecurePassword123@!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/prod/auth/login",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"prod",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginCeaserCipher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"user@example.com\",\n  \"ceaserQuestion\": \"hello\",\n  \"ceaserAnswer\": \"khoor\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/prod/auth/cipher",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"prod",
+						"auth",
+						"cipher"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "https://3ghmopekle.execute-api.us-east-1.amazonaws.com"
+		}
+	]
+}

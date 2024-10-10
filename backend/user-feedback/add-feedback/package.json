@@ -1,0 +1,12 @@
+{
+  "name": "feedback-handler",
+  "version": "1.0.0",
+  "main": "index.mjs",
+  "type": "module",
+  "dependencies": {
+    "@google-cloud/language": "^4.0.0",
+    "@aws-sdk/client-dynamodb": "^3.38.0",
+    "@aws-sdk/lib-dynamodb": "^3.38.0",
+    "uuid": "^8.3.2"
+  }
+}

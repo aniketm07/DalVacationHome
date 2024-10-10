@@ -1,0 +1,12 @@
+{
+  "name": "user-security-question",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "^3.600.0",
+    "@aws-sdk/client-dynamodb": "^3.602.0",
+    "@aws-sdk/lib-dynamodb": "^3.602.0",
+    "dotenv": "^16.4.5"
+  }
+}

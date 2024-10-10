@@ -1,0 +1,16 @@
+{
+  "name": "publish-message",
+  "version": "1.0.0",
+  "description": "Publishes messages to Cloud Pub/Sub",
+  "main": "index.js",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.4.0",
+    "@google-cloud/pubsub": "^4.5.0",
+    "cors": "^2.8.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
