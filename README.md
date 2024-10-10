@@ -16,6 +16,11 @@ DalVacationHome is a serverless web application designed to streamline the booki
     <img alt="Firebase" src="https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase">
 </p>
 
+
+## Project Architecture
+
+![Project Architecture Diagram](https://dalvacationhome.s3.amazonaws.com/public/images/architecture.png)
+
 ## Modules
 
 ### User Management & Authentication
@@ -215,8 +220,3 @@ Follow these steps to set up and run the DalVacationHome project:
   REACT_APP_LEX_ACCESS_KEY_ID={LEX_ACCESS_KEY_ID}
   REACT_APP_LEX_SECRET_ACCESS_KEY={SECRET_ACCESS_KEY}
   ```
-
-
-## Project Architecture
-
-![Project Architecture Diagram](https://dalvacationhome.s3.amazonaws.com/public/images/architecture.png)
