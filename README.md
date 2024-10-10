@@ -16,23 +16,6 @@ DalVacationHome is a serverless web application designed to streamline the booki
     <img alt="Firebase" src="https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase">
 </p>
 
-
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Modules Overview](#modules-overview)
-  - [User Management & Authentication](#user-management--authentication)
-  - [Virtual Assistant](#virtual-assistant)
-  - [Message Passing](#message-passing)
-  - [Notifications](#notifications)
-  - [Data Analysis and Visualization](#data-analysis-and-visualization)
-  - [Web Application Building and Deployment](#web-application-building-and-deployment)
-- [Design Decisions and Best Practices](#design-decisions-and-best-practices)
-- [Project Architecture](#project-architecture)
-- [Team Contributions](#team-contributions)
-- [Project Planning](#project-planning)
-- [References](#references)
-
 ## Modules
 
 ### User Management & Authentication
