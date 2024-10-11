@@ -1,12 +1,13 @@
 import AWS from "aws-sdk";
 import { getSession } from "../lib/session";
+import {lexCredentials} from "../constants/credentials";
 
 const sessionToken = getSession();
 
 AWS.config.update({
-  region: "us-east-1",
-  accessKeyId: "AKIA43FYQZJBDZRVF6FD",
-  secretAccessKey: "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",
+  region: lexCredentials.region,
+  accessKeyId: lexCredentials.accessKeyId,
+  secretAccessKey: lexCredentials.secretAccessKey,
 });
 
 export const sendToLex = (message, guestEmail, setMessages) => {
